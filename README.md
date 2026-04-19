@@ -31,6 +31,36 @@ Symbols:
 - r → grass
 - _ → empty cell
 
+# Usage
+
+- Using puzzle from the auxiliary file ``puzzlesAcampar.pl`
+```text
+?- puzzle(6-14, P), resolve(P).
+```
+
+- Manually inserting data
+```text
+?- P = ([
+[_, a, _, a, _, _],
+[a, _, _, _, _, _],
+[_, _, _, _, _, _],
+[_, _, a, a, _, _],
+[_, _, _, _, _, _],
+[_, a, _, _, a, _]],
+[3, 0, 1, 1, 1, 1], [2, 1, 1, 1, 2, 0]), resolve(P).
+```
+
+- Output
+```text
+P = ([[t,a,t,a,t,r],
+      [a,r,r,r,r,r],
+      [r,r,r,t,r,r],
+      [r,t,a,a,r,r],
+      [r,r,r,r,t,r],
+      [t,a,r,r,a,r]],
+     [3,0,1,1,1,1],
+     [2,1,1,1,2,0]).
+```
 
 # Technologies
 
